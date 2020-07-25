@@ -1,25 +1,25 @@
-let header = document.createElement('h1');
-header.innerHTML = "Javascript Digital Clock";
-document.body.appendChild(header);
+
+document.getElementById('pageTitle').innerHTML = "Javascript Digital Clock";
 const time= document.createElement('h3');
 
 
+
 function currentTime(){
-    const clockDiv = document.getElementById('clock');
+   // const clockDiv = document.getElementById('clock');
     const date = new Date();
     let h= date.getHours();
     let q = twelveHourTime(h);
-    h = date.getHours()>= 12 ? date.getHours()-12: date.getHours();;
+    h = date.getHours()> 12 ? date.getHours()-12: date.getHours();;
     let m = date.getMinutes();
-    let s = date.getSeconds();
+    //let s = date.getSeconds();
     m= updateTime(m);
-    s= updateTime(s);
+    //s= updateTime(s);
     
     
     clock.appendChild(time);
-    time.innerHTML= ( h + ':' + m + ':' + s + q);
+    time.innerHTML= ( h + ':' + m /*+ ':' + s*/ + q);
 
-    document.body.appendChild(clock);
+    //document.body.appendChild(clock);
     let t =  setTimeout(() => {
         currentTime();
     }, 1000);

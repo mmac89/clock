@@ -5,11 +5,23 @@
 <head>
     <title>Javascript Project</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    
+    <link href="styles.css"  type="text/css" rel="stylesheet">
+
 </head>
 <body>
-    <div id="clockDiv"><span id = "clock"></span></div>
+    <header>
+        <h1 id="pageTitle"></h1>
+    </header>
+    
+    <div id="clockDiv">
+        <span id = "clock"></span>
+
+        <div id= "buttons">
+            <button id="twelveHour"> 12 hour time</button>
+            <button id="twentyFourHour"> 24 hour time</button>
+        </div>
+    </div>
+        
 
     <script src="script.js"></script>
 </body>

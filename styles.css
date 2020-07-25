@@ -1,12 +1,25 @@
 #clock{
     font-family: 'Orbitron', sans-serif;
     font-size: 175px;
-    color: #b2dd04;
+    color: #f1ffc9;
+    letter-spacing: .1em;
 }
-h1{
-    color: #b2dd04;
-}
+
 
 body{
     background-color: #0d0f10;
+    text-align: center;
+}
+h1{
+    color: #f1ffc9;
+    font-size: 4em;
+}
+
+#clockDiv{
+    border: white solid;
+}
+
+#buttons{
+    background-color: #f1ffc9;
+    color: #0d0f10;
 }
