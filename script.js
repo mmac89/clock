@@ -4,44 +4,53 @@ const time= document.createElement('h3');
  let twelveHourBoolean= true;
 
 
-function twelveHourFormat(){
+function currentTime(){
    // const clockDiv = document.getElementById('clock');
     const date = new Date();
     let h= date.getHours();
-    let q = twelveHourTime(h);
-    h = date.getHours()> 12 ? date.getHours()-12: date.getHours();;
     let m = date.getMinutes();
     let s = date.getSeconds();
     m= updateTime(m);
     s= updateTime(s);
     
-    
-    clock.appendChild(time);
-    time.innerHTML= ( h + ':' + m + ':' + s + q);
+    document.getElementById('twentyFourHour').addEventListener('click', ()=>{
+        twelveHourBoolean = false;
+    });
+
+    document.getElementById('twelveHour').addEventListener('click', ()=>{
+        twelveHourBoolean = true;
+    });
  
-    //document.body.appendChild(clock);
+    clock.appendChild(time);
+    if (twelveHourBoolean === true){
+        let q = twelveHourTime(h);
+        h = date.getHours()> 12 ? date.getHours()-12: date.getHours();;
+        time.innerHTML= ( h + ':' + m + ':' + s + q);
+    } else{
+        time.innerHTML = (h + ':' + m + ':' + s);
+    }
     let t =  setTimeout(() => {
-        twelveHourFormat();
+        currentTime();
     }, 1000);
 }
 
-function twentyFourTime(){
-    const date = new Date();
-    let h= date.getHours();
-    let m = date.getMinutes();
-    let s = date.getSeconds();
-    m= updateTime(m);
-    s= updateTime(s);
+// function twentyFourTime(){
+//     const date = new Date();
+//     let h= date.getHours();
+//     let m = date.getMinutes();
+//     let s = date.getSeconds();
+//     m= updateTime(m);
+//     s= updateTime(s);
     
     
-    clock.appendChild(time);
-    time.innerHTML= ( h + ':' + m + ':' + s );
+//     clock.appendChild(time);
+//     time.innerHTML= ( h + ':' + m + ':' + s );
  
-    //document.body.appendChild(clock);
-    let t =  setTimeout(() => {
-        twentyFourTime();
-    }, 1000);
-}
+//     //document.body.appendChild(clock);
+//     let t =  setTimeout(() => {
+//         twentyFourTime();
+//     }, 1000);
+// }
 
 function updateTime(k){
     if(k<10){
@@ -63,13 +72,12 @@ function twelveHourTime(w){
 }
 
 
-twelveHourFormat();
+currentTime();
 
 document.getElementById('twentyFourHour').addEventListener('click', ()=>{
-    twentyFourTime();
-    
+    twelveHourBoolean = false;
 });
 
 document.getElementById('twelveHour').addEventListener('click', ()=>{
-    twelveHourFormat();
+    currentTime();
 })
