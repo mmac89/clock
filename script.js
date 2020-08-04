@@ -5,7 +5,6 @@ const time= document.createElement('h3');
 
 
 function currentTime(){
-   // const clockDiv = document.getElementById('clock');
     const date = new Date();
     let h= date.getHours();
     let m = date.getMinutes();
@@ -33,24 +32,6 @@ function currentTime(){
         currentTime();
     }, 1000);
 }
-
-// function twentyFourTime(){
-//     const date = new Date();
-//     let h= date.getHours();
-//     let m = date.getMinutes();
-//     let s = date.getSeconds();
-//     m= updateTime(m);
-//     s= updateTime(s);
-    
-    
-//     clock.appendChild(time);
-//     time.innerHTML= ( h + ':' + m + ':' + s );
- 
-//     //document.body.appendChild(clock);
-//     let t =  setTimeout(() => {
-//         twentyFourTime();
-//     }, 1000);
-// }
 
 function updateTime(k){
     if(k<10){
