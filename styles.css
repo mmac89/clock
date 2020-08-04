@@ -20,7 +20,7 @@ h1{
     border: white solid;
 }
 
-#twelveHour, #twentyFourHour{
+#twelveHour, #twentyFourHour, #alarm{
     font-family: 'orbitron', sans-serif;
     display: inline-block;
     border: none;
@@ -51,4 +51,12 @@ button:focus {
 
 button:active {
     transform: scale(0.99);
+}
+
+h3{
+    margin: 25px;
+}
+
+#alarmText{
+    color: #f1ffc9;
 }

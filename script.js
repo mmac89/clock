@@ -1,6 +1,9 @@
 
 document.getElementById('pageTitle').innerHTML = "Javascript Digital Clock";
+//document.getElementById('alarmInput').style.display= 'none';
+//document.getElementById('alarmText').style.display = 'none';
 const time= document.createElement('h3');
+let alarm = '';
  let twelveHourBoolean= true;
 
 
@@ -62,3 +65,20 @@ document.getElementById('twentyFourHour').addEventListener('click', ()=>{
 document.getElementById('twelveHour').addEventListener('click', ()=>{
     currentTime();
 })
+
+// document.getElementById("alarm").addEventListener('click', ()=>{
+//     document.getElementById('alarmInput').style.display= 'block';
+//     //alarm = document.getElementById('alarmTime').innerHTML;
+// })
+
+// document.getElementById("confirmAlarm").addEventListener('click', ()=>{
+//     alarm = document.getElementById('alarmTime').value;
+//     console.log(alarm);
+//     document.getElementById('alarmInput').style.display= 'none';
+//     document.getElementById('alarmText').style.display= 'block';
+//     document.getElementById('alarmmmm').innerText = alarm;
+// })
+
+// if(document.alarm.value = date){
+//     alert("Time to get up");
+// }
